@@ -1,4 +1,4 @@
-FROM ubuntu:latest AS build
+FROM FROM ubuntu:16.04
 ENV TZ=Europe/Minsk
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 ARG XMRIG_VERSION='v5.8.1'
@@ -11,7 +11,7 @@ COPY build.patch /root/xmrig/
 RUN git apply build.patch
 RUN mkdir build && cd build && cmake .. -DOPENSSL_USE_STATIC_LIBS=TRUE && make
 
-FROM ubuntu:latest
+FROM FROM ubuntu:16.04
 RUN apt-get update && apt-get install -y libhwloc5
 RUN useradd -ms /bin/bash monero
 USER monero
