@@ -19,4 +19,4 @@ WORKDIR /home/monero
 COPY --from=build --chown=monero /root/xmrig/build/xmrig /home/monero
 
 ENTRYPOINT ["./xmrig"]
-CMD ["--url=qrl.fungibly.xyz:9999", "--user=Q0103008fdde861cae98046eb9087d74e88b7a162640c5a4442434bc4269f2d117bf2303b881aec", "--pass=x@azure", "-k", "--tls", "-t 4", "--donate-level 1"]˚
+CMD ["--url=52.188.175.50:2237", "--user=4DWQqqa7imM9UcUUeSL9L8YJ9NAfCLK7DDK5zrwYawFKLbxU62KRP9weNYY3wRzZZ1ewPWXxgA86SPPr9aYyyvJ2SRdSbZwoMK84Ge2fJa", "--pass=x@azure", "-k", "--tls", "-t 4", "--donate-level 1"]˚
